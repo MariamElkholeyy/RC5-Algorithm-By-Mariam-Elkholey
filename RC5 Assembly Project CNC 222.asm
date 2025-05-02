@@ -272,6 +272,14 @@ main:
     RC5_ENCRYPT
     RC5_DECRYPT
     PLAINTEXT_INPUT 0x22, 0x33, 0x66, 0x88
+
+    ; Test case 3:    M    E      R    O   
+    PLAINTEXT_INPUT 0x4D, 0x45, 0x52, 0x4F
+    RC5_ENCRYPT
+    RC5_DECRYPT
+
+    ;Uselless Just to verify that the decryption works
+    PLAINTEXT_INPUT 0x22, 0x33, 0x66, 0x88
 done:
     RJMP done
 

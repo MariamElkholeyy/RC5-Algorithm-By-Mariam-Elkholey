@@ -279,6 +279,8 @@ done:
 
 ; Subroutine: Reset Z pointer for S array
 i_reset:
+    INC ZL
+    INC ZL
     CPI ZL, low(S_PLACE + 36)
     BRNE i_reset_done
     LDI ZL, low(S_PLACE)
@@ -288,6 +290,8 @@ i_reset_done:
 
 ; Subroutine: Reset Y pointer for L array
 j_reset:
+    INC YL
+    INC YL
     CPI YL, low(L_PLACE + 12)
     BRNE j_reset_done
     LDI YL, low(L_PLACE)

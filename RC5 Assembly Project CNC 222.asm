@@ -117,12 +117,12 @@ ZEROR:
     LDI R17, QH
 s_init_loop:
     LD R20, Z+
-    LD R21, Z
+    LD R21, Z+
     ADD_WORD R20, R21, R16, R17
     MOV R22, R20
     MOV R23, R21
-    ST Z+, R22
-    ST Z, R23
+    ST Z, R22
+    STD Z+1, R23
     DEC R18
     BRNE s_init_loop
 
@@ -136,7 +136,7 @@ s_init_loop:
     LDI YL, low(L_PLACE)
     LDI YH, high(L_PLACE)
     LDI R20, N
-mix_loop:
+mix_loop:                               
     ADD_WORD R0, R1, R2, R3
     LD R22, Z+
     LD R23, Z

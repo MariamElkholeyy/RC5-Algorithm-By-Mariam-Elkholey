@@ -118,11 +118,9 @@ ZEROR:
 s_init_loop:
     LD R20, Z+
     LD R21, Z+
-    ADD_WORD R20, R21, R16, R17
-    MOV R22, R20
-    MOV R23, R21
-    ST Z, R22
-    STD Z+1, R23
+    ADD_WORD R20, R21, R16, R17         
+    ST Z, R20
+    STD Z+1, R21
     DEC R18
     BRNE s_init_loop
 

@@ -134,16 +134,19 @@ s_init_loop:
     LDI YL, low(L_PLACE)
     LDI YH, high(L_PLACE)
     LDI R20, N
-mix_loop:                               
-    ADD_WORD R0, R1, R2, R3
+mix_loop: 
+    ;A = S[i] = (S[i]+A+B)<<< 3        
+    ADD_WORD R0, R1, R2, R3     ; A+B
     LD R22, Z+
     LD R23, Z
-    ADD_WORD R0, R1, R22, R23
+    ADD_WORD R0, R1, R22, R23   ; S[i] + A + B
     LDI R24, 3
     ROTL_WORD R0, R1, R24
     ST Z, R1
     ST -Z, R0
     RCALL i_reset
+
+    ;B = L[j] = (L[j]+A+B)<<< (A+B)MOD16         
     ADD_WORD R2, R3, R0, R1
     LD R22, Y+
     LD R23, Y
@@ -179,7 +182,7 @@ encrypt_loop:
 
 		LD R23, X+
 		LD R24, X+
-		XOR_WORD AH, AL, BH, BL
+		XOR_WORD AH, AL, BH, BL     
 		ROTL_WORD AH, AL, R22  
 		ADD_WORD AH, AL, R24, R23
 
@@ -196,7 +199,7 @@ encrypt_loop:
 		;Loop controling
 		DEC R20
         BRNE encrypt_loop
-.ENDMACRO
+    .ENDMACRO
 
 .MACRO RC5_DECRYPT
     LDI XL, low(S_PLACE + 36) ; Start at S[17] high byte
@@ -283,7 +286,7 @@ main:
 done:
     RJMP done
 
-; Subroutine: Reset Z pointer for S array
+; Reset Z pointer for S array
 i_reset:
     INC ZL
     INC ZL

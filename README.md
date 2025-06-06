@@ -8,11 +8,11 @@
 ![intro](https://github.com/user-attachments/assets/e1c8882d-e138-4898-b6f6-f8209d3cd618)
 
 > A **high-performance, educational implementation** of the **RC5 symmetric-key encryption algorithm** written entirely in **AVR Assembly**, designed for the **ATmega328P microcontroller**.  
-> Highlights include:
-> - Use of **macros** to simplify repetitive tasks
-> - Full **encryption and decryption** cycle
-> - Manual **S-array construction**
-> - Secure memory handling
+> Featuring:
+> - Full **key expansion**
+> - Clean **encryption & decryption**
+> - Handcrafted **macros**
+> - No libraries — just pure register magic ✨
 
 ---
 

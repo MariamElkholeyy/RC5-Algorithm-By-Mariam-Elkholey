@@ -172,6 +172,9 @@ The **L-array** is built by splitting the user-provided key into 16-bit words.
    L[i] = key[2*i] | (key[2*i+1] << 8)
    ```
 
+![ScreenRecorderProject8_1-ezgif com-optimize](https://github.com/user-attachments/assets/e5c25afc-f293-46e0-8975-c348aa4e7aca)
+
+
 This results in `c = b / 2` 16-bit words.
 
 ---
@@ -194,6 +197,8 @@ This stage mixes the **S-array** and **L-array** together using a series of oper
    i = (i + 1) % t
    j = (j + 1) % c
    ```
+
+
 
 This creates a highly entropic and secure expanded key table.
 

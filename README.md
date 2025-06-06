@@ -123,6 +123,9 @@ Used to initialize the **S-array** before mixing:
 
 These values are derived from mathematical constants and provide good diffusion.
 
+<img width="1439" alt="Screenshot 2025-06-06 at 9 42 50 PM" src="https://github.com/user-attachments/assets/a3c57684-9a24-4701-a220-2f10de4833d7" />
+
+
 
 
 ### 🔒 Predefined Secret Key
@@ -151,17 +154,8 @@ The **S-array** starts with repeated additions of the constant `Pw`.
 
 ### 🖼 Diagram:
 
-```mermaid
-graph LR
-    classDef sbox fill:#e0e0e0,stroke:#333;
+![ScreenRecorderProject7-ezgif com-optimize](https://github.com/user-attachments/assets/99280db0-e545-4753-af8d-76967300a358)
 
-    subgraph S_Array[S-Array (18 Words)]
-        direction LR
-        s0[S[0] = Pw] --> s1[S[1]] --> s2[...] --> s17[S[17]]
-    end
-
-    class s0,s1,s2,s17 sbox;
-```
 
 Each entry contributes to the overall entropy of the cipher.
 
@@ -349,8 +343,6 @@ MIT License – see [LICENSE](LICENSE)
 👤 **Mariam Wael Elkholey**  
 📧 Mariam.wael.elkholey@gmail.com 
 📍 Alexandria, Egypt
-```
 
----
 
 

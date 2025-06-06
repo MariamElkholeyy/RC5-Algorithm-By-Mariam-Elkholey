@@ -5,6 +5,8 @@
 ![Architecture](https://img.shields.io/badge/architecture-AVR%20Assembly-orange.svg) 
 ![Platform](https://img.shields.io/badge/platform-ATmega328P-yellow.svg) 
 
+![intro](https://github.com/user-attachments/assets/e1c8882d-e138-4898-b6f6-f8209d3cd618)
+
 > A **high-performance, educational implementation** of the **RC5 symmetric-key encryption algorithm** written entirely in **AVR Assembly**, designed for the **ATmega328P microcontroller**.  
 > Highlights include:
 > - Use of **macros** to simplify repetitive tasks
@@ -20,9 +22,10 @@
 - [📦 Features](#-features)
 - [🧩 Core Components Explained](#-core-components-explained)
   - [🔄 RC5 Encryption Workflow](#-rc5-encryption-workflow)
+  - [👾 Algorithm Flowchart](#-algorithm-flowchart)
     - [🧮 RC5 Key Expansion Overview](#-rc5-key-expansion-overview)
-      - [🔮 Magic Constants & Predefined Key](#-magic-constants--predefined-key)
       - [📦 Memory Layout](#-memory-layout)
+      - [🔮 Magic Constants & Predefined Key](#-magic-constants--predefined-key)
       - [🧠 S-array Initialization](#-s-array-initialization)
       - [📋 L-array Initialization](#-l-array-initialization)
       - [🔄 Mixing Step](#-mixing-step)
@@ -64,9 +67,21 @@
 
 ### 🔄 RC5 Encryption Workflow
 
- <img width="748" alt="Screenshot 2025-06-06 at 9 09 03 PM" src="https://github.com/user-attachments/assets/8bf77dc6-8689-4bbc-95a5-95cd5e922868" />
+ <img width="1440" alt="Screenshot 2025-06-06 at 9 23 40 PM" src="https://github.com/user-attachments/assets/c2cbd56e-1681-4d57-8cc9-f6d4c59ff817" />
+
+### 👾 Algorithm Flowchart
+
+
+<img width="1436" alt="Screenshot 2025-06-06 at 9 39 10 PM" src="https://github.com/user-attachments/assets/e6be0e6d-9e7c-4969-b8ab-3d95a970275a" />
+
+
+
+
 
 ## 🧮 RC5 Key Expansion Overview
+
+<img width="1439" alt="Screenshot 2025-06-06 at 9 41 04 PM" src="https://github.com/user-attachments/assets/45821fa3-2ddb-40e0-bcc6-03ba0a3b7596" />
+
 
 RC5 uses a **key-dependent S array** generated through a deterministic process involving:
 - Two arrays: **S-array** (expanded key table), **L-array** (key split into words)
@@ -74,8 +89,28 @@ RC5 uses a **key-dependent S array** generated through a deterministic process i
   1. **Initialization of S-array**
   2. **Initialization of L-array**
   3. **Mixing step** that combines both arrays
+ 
+  <img width="1439" alt="Screenshot 2025-06-06 at 9 41 45 PM" src="https://github.com/user-attachments/assets/99a86995-dc8f-4f25-9d3a-51e3459275af" />
+
 
 This ensures strong cryptographic entropy from even small keys.
+
+---
+
+## 📦 Memory Layout
+
+To avoid overlap and ensure clarity, memory is manually assigned as follows:
+
+| Section      | Start Address | Size     | Description                     |
+|--------------|---------------|----------|---------------------------------|
+| `plaintext`  | 0x0060        | 4 bytes  | Input plaintext (A, B)          |
+| `ciphertext` | 0x0064        | 4 bytes  | Encrypted output                |
+| `key`        | 0x0068        | 12 bytes | Secret key                      |
+| `L`          | 0x0074        | 6 words  | Split key in 16-bit words       |
+| `S`          | 0x0080        | 18 words | Expanded key table              |
+
+All values are accessed directly via registers or indirect addressing.
+
 
 ---
 
@@ -101,23 +136,7 @@ key:
 
 This is a **12-byte (96-bit)** key, which maps to `c = 6` 16-bit words.
 
----
 
-## 📦 Memory Layout
-
-To avoid overlap and ensure clarity, memory is manually assigned as follows:
-
-| Section      | Start Address | Size     | Description                     |
-|--------------|---------------|----------|---------------------------------|
-| `plaintext`  | 0x0060        | 4 bytes  | Input plaintext (A, B)          |
-| `ciphertext` | 0x0064        | 4 bytes  | Encrypted output                |
-| `key`        | 0x0068        | 12 bytes | Secret key                      |
-| `L`          | 0x0074        | 6 words  | Split key in 16-bit words       |
-| `S`          | 0x0080        | 18 words | Expanded key table              |
-
-All values are accessed directly via registers or indirect addressing.
-
----
 
 ## 🧠 S-array Initialization
 
@@ -327,17 +346,11 @@ MIT License – see [LICENSE](LICENSE)
 
 ## 💬 Author
 
-👤 **Your Name Here**  
-📧 your.email@example.com  
-📍 Location, Country
+👤 **Mariam Wael Elkholey**  
+📧 Mariam.wael.elkholey@gmail.com 
+📍 Alexandria, Egypt
 ```
 
 ---
 
-### ✅ Want Me To Do Any of These Next?
-- 📥 Export this as a downloadable `.md` file
-- 🖼 Generate SVG/PNG versions of the Mermaid diagrams
-- 📁 Help organize your project folder visually
-- 📄 Print-ready PDF version
 
-Let me know how I can assist further! 😊

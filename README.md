@@ -32,7 +32,8 @@
         - [🧠 S-array Initialization- code](#-s-array-initialization-code)
         - [📋 L-array Initialization](#-l-array-initialization)
         - [🔄 Mixing Step](#-mixing-step)
-      
+- [🔐 RC5 Encryption Process](#-rc5-encryption-process)
+- [🔓 RC5 Decryption Process](#-rc5-decryption-process)
 - [⚙️ How It Works](#-how-it-works)
 - [🧱 Code Organization & Macros](#-code-organization--macros)
 - [🔧 Configuration Parameters](#-configuration-parameters)

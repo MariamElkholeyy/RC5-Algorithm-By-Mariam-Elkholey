@@ -29,7 +29,10 @@
       - [🧠 S-array Initialization](#-s-array-initialization)
       - [📋 L-array Initialization](#-l-array-initialization)
       - [🔄 Mixing Step](#-mixing-step)
-      - [⚙️ Code Implementation Highlights](#-code-implementation-highlights)
+      - [⚙️ Code Implementation Highlights 1](#-code-implementation-highlights-1)
+        - [🧠 S-array Initialization- code](#-s-array-initialization-code)
+        - [📋 L-array Initialization](#-l-array-initialization)
+        - [🔄 Mixing Step](#-mixing-step)
       
 - [⚙️ How It Works](#-how-it-works)
 - [🧱 Code Organization & Macros](#-code-organization--macros)
@@ -201,6 +204,17 @@ This stage mixes the **S-array** and **L-array** together using a series of oper
 
 
 This creates a highly entropic and secure expanded key table.
+
+---
+
+## ⚙️ Code Implementation Highlights 1
+### 🧠 S-array Initialization code
+
+
+
+https://github.com/user-attachments/assets/0c98b78e-efb9-4a48-ba04-b424e7e9f9f0
+
+
 
 ---
 

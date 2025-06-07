@@ -28,10 +28,10 @@
       - [🧠 S-array Initialization](#-s-array-initialization)
       - [📋 L-array Initialization](#-l-array-initialization)
       - [🔄 Mixing Step](#-mixing-step)
-      - [⚙️ Code Implementation Highlights 1](#-code-implementation-highlights-1)
-        - [🧠 S-array Initialization- code](#-s-array-initialization-code)
-        - [📋 L-array Initialization](#-l-array-initialization)
-        - [🔄 Mixing Step](#-mixing-step)
+      - [⚙️ Code Implementation Highlights](#-code-implementation-highlights)
+        - [🧠 S-array Initialization Code](#-s-array-initialization-code)
+        - [📋 L-array Initialization Code](#-l-array-initialization-cpde)
+        - [🔄 Mixing Step Code](#-mixing-step-code)
 - [🔐 RC5 Encryption Process](#-rc5-encryption-process)
 - [🔓 RC5 Decryption Process](#-rc5-decryption-process)
 - [🧪 Sample Execution Flow](#-sample-execution-flow)
@@ -211,6 +211,14 @@ This creates a highly entropic and secure expanded key table.
 
 https://github.com/user-attachments/assets/0c98b78e-efb9-4a48-ba04-b424e7e9f9f0
 
+### 📋 L-array Initialization code
+
+
+
+https://github.com/user-attachments/assets/c14036ad-8e6e-4636-ad7e-c1537b760b1b
+
+
+### 🔄 Mixing Step Code
 
 
 ---
@@ -304,7 +312,6 @@ Macros help reduce repetitive tasks like:
 
 ## 🎨 Visual Aids
 
-All core components are illustrated using **Mermaid diagrams** for clarity.
 
 ---
 

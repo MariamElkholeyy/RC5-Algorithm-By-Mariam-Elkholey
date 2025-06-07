@@ -221,6 +221,9 @@ https://github.com/user-attachments/assets/c14036ad-8e6e-4636-ad7e-c1537b760b1b
 ### 🔄 Mixing Step Code
 
 
+https://github.com/user-attachments/assets/aa43e19f-aeb9-4b7c-96b3-0ada851674d5
+
+
 ---
 
 ## 🔐 RC5 Encryption Process
@@ -244,16 +247,8 @@ RC5 encryption applies a series of rounds to transform plaintext into ciphertext
 
 ### 🖼 Diagram:
 
-```mermaid
-graph LR
-    A[Plaintext Input] --> B((Register A & B))
-    B --> C((Add S[0], S[1]))
-    C --> D{{Round 1}}
-    D --> E{{Round 2}}
-    E --> F{{...}}
-    F --> G{{Round r}}
-    G --> H[Ciphertext Output]
-```
+![image](https://github.com/user-attachments/assets/b8d8dff2-ec13-4666-9bfe-43272424bd07)
+
 
 ---
 
@@ -287,6 +282,9 @@ graph RL
     D --> C((Subtract S[0], S[1]))
     C --> A[Plaintext Output]
 ```
+
+---
+### ⚙️ Code Implementation 
 
 ---
 

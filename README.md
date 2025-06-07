@@ -249,6 +249,11 @@ RC5 encryption applies a series of rounds to transform plaintext into ciphertext
 
 ![image](https://github.com/user-attachments/assets/b8d8dff2-ec13-4666-9bfe-43272424bd07)
 
+### ⚙️ Code Implementation 
+
+https://github.com/user-attachments/assets/418b143e-fbcc-4bf2-b936-75807ca1ec59
+
+
 
 ---
 

@@ -32,14 +32,11 @@
         - [🧠 S-array Initialization Code](#-s-array-initialization-code)
         - [📋 L-array Initialization Code](#-l-array-initialization-cpde)
         - [🔄 Mixing Step Code](#-mixing-step-code)
-    - [🔐 RC5 Encryption Process](#-rc5-encryption-process)
-    - [🔓 RC5 Decryption Process](#-rc5-decryption-process)
+    - [🔐 RC5 Encryption & 🔓 Decryption Overview](#-rc5-encryption-&-decryption-overview)
+      - [🔐 RC5 Encryption Process](#-rc5-encryption-process)
+      - [🔓 RC5 Decryption Process](#-rc5-decryption-process)
 - [🧪 Sample Execution Flow](#-sample-execution-flow)
-- [🔐 Security Considerations](#-security-considerations)
-- [📘 Use Cases](#-use-cases)
 - [🛠 Hardware Requirements](#-hardware-requirements)
-- [🛠️ Toolchain & Simulation](#️-toolchain--simulation)
-- [📂 Project Structure](#-project-structure)
 - [🚧 Limitations](#-limitations)
 - [🧠 Future Improvements](#-future-improvements)
 - [🤝 Contributing](#-contributing)
@@ -225,6 +222,10 @@ https://github.com/user-attachments/assets/aa43e19f-aeb9-4b7c-96b3-0ada851674d5
 
 
 ---
+# 🔐 RC5 Encryption & 🔓 Decryption Overview
+
+![image](https://github.com/user-attachments/assets/570eae51-ec5d-4cc9-98f6-32f4dae7ac76)
+
 
 ## 🔐 RC5 Encryption Process
 
@@ -244,10 +245,6 @@ RC5 encryption applies a series of rounds to transform plaintext into ciphertext
    A = ((A ^ B) <<< B) + S[2*i]
    B = ((B ^ A) <<< A) + S[2*i+1]
    ```
-
-### 🖼 Diagram:
-
-![image](https://github.com/user-attachments/assets/b8d8dff2-ec13-4666-9bfe-43272424bd07)
 
 ### ⚙️ Code Implementation 
 
@@ -276,20 +273,9 @@ Decryption reverses the encryption steps using the same S-array in reverse order
    A = ((A - S[2*i]) >>> B) ^ B
    ```
 
-### 🖼 Diagram:
-
-```mermaid
-graph RL
-    H[Ciphertext Input] --> G{{Round r}}
-    G --> F{{Round r-1}}
-    F --> E{{...}}
-    E --> D{{Round 1}}
-    D --> C((Subtract S[0], S[1]))
-    C --> A[Plaintext Output]
-```
-
 ---
 ### ⚙️ Code Implementation 
+
 
 ---
 
